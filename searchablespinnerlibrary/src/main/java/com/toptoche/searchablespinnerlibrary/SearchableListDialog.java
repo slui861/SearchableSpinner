@@ -176,7 +176,9 @@ public class SearchableListDialog extends DialogFragment implements
     public void setListAdapter(ArrayAdapter adapter)
     {
         listAdapter = adapter;
-        _listViewItems.setAdapter(listAdapter);
+        if (_listViewItems != null) {
+            _listViewItems.setAdapter(listAdapter);
+        }
     }
 
     @Override
