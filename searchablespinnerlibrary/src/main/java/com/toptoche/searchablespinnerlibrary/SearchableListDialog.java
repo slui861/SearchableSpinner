@@ -173,6 +173,12 @@ public class SearchableListDialog extends DialogFragment implements
         });
     }
 
+    public void setListAdapter(ArrayAdapter adapter)
+    {
+        listAdapter = adapter;
+        _listViewItems.setAdapter(listAdapter);
+    }
+
     @Override
     public boolean onClose() {
         return false;

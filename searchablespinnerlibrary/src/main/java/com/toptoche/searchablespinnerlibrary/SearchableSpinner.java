@@ -106,8 +106,10 @@ public class SearchableSpinner extends Spinner implements View.OnTouchListener,
                 ArrayAdapter arrayAdapter = new ArrayAdapter(_context, android.R.layout
                         .simple_list_item_1, new String[]{_strHintText});
                 super.setAdapter(arrayAdapter);
+                _searchableListDialog.setListAdapter(arrayAdapter);
             } else {
                 super.setAdapter(adapter);
+                _searchableListDialog.setListAdapter((ArrayAdapter) adapter);
             }
 
         } else {
